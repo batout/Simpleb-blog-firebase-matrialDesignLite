@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>simple fireBase blog</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-red.min.css" />
+
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+
+      <!-- LOGIN DIALOG -->
+      <dialog id="loginDialog" class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Sign In</h4>
+        <div class="mdl-dialog__content">
+          <p id="loginError"></p>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="loginEmail">
+            <label class="mdl-textfield__label" for="sample3">Email...</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="loginPassword">
+            <label class="mdl-textfield__label" for="sample3">Password...</label>
+          </div>
+        </div>
+        <div class="mdl-dialog__actions">
+          <!-- Colored raised button -->
+          <button id="loginBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+            Sign In
+          </button>
+          <!-- MDL Spinner Component -->
+          <div id="loginProgress" class="mdl-spinner mdl-js-spinner is-active"></div>
+        </div>
+      </dialog>
+
+      <!-- MAIN PAGE CONTENT -->
+
+      <div class="login-cover">
+        <!-- MDL Spinner Component -->
+        <div class="page-loader mdl-spinner mdl-js-spinner is-active"></div>
+    </div>
+    <!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title button-right-icon" >Batout Blog
+        <span>| Home</span>
+      </span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Sign out <i class="material-icons">account_circle</i>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <!-- Your content goes here -->
+
+
+
+    </div>
+  </main>
+</div>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA1h1kLs1EAFIl_87-XKIkSowhc5x6oCMs",
+    authDomain: "mytestapp-89656.firebaseapp.com",
+    databaseURL: "https://mytestapp-89656.firebaseio.com",
+    projectId: "mytestapp-89656",
+    storageBucket: "mytestapp-89656.appspot.com",
+    messagingSenderId: "501671699381"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js">
+
+</script>
+  </body>
+</html>
